@@ -1,0 +1,22 @@
+.home-container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main";
+  grid-template-rows: 100px 1fr;
+  grid-template-columns: 20% 1fr;
+  height: 100vh;
+  margin: 0;
+
+  .header {
+    grid-area: header;
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+  }
+
+  .main {
+    grid-area: main;
+  }
+}

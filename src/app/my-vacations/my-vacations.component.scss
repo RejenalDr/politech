@@ -1,0 +1,27 @@
+.my-vacations-wrap{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 10px;
+    table{
+        box-sizing: border-box;
+        width: 100%;
+        td{
+            padding: 10px 0 0;
+        }
+        td.left-column{
+            text-align: left;
+        }
+        td.center-column{
+            text-align: center;
+        }
+        td.right-column{
+            text-align: right;
+        }
+    }
+    .table-name{
+        width: 100%;
+        border-bottom: 1px solid black;
+    }
+}

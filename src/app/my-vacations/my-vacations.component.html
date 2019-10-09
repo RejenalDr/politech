@@ -1,0 +1,34 @@
+<div class="my-vacations-wrap">
+  <table>
+    <thead>
+      <tr>
+        <td colspan="4" class="table-name">
+          My vacations
+        </td>
+      </tr>
+      <tr>
+        <td class="left-column">
+          vacations dates
+        </td>
+        <td class="center-column">
+          description
+        </td>
+        <td class="center-column">
+          status
+        </td>
+        <td class="right-column">
+          vacation balance
+        </td>
+
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of vacationTable"> 
+            <td class="left-column">{{ item.startDay | date:'dd MMMM yyyy'}} - {{ item.endDay | date:'dd MMMM yyyy'}}</td>
+            <td class="center-column">{{ item.description }}</td>
+            <td class="center-column">{{ item.status }}</td>
+            <td class="right-column">{{ item.duration }}</td>
+        </tr>
+    </tbody>
+  </table>
+</div>

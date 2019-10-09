@@ -1,0 +1,25 @@
+.nav-wrapper{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 10%;
+    align-items: center;
+
+    .links{
+        display: flex;
+        justify-content: space-around;
+        width: 500px;
+    }
+
+    .summary{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        img{
+            border-radius: 50%;
+            max-width: 45px;
+            height: auto;
+            margin-right: 10px;
+        }
+    }
+    
+}

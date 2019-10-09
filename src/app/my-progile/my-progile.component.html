@@ -1,0 +1,63 @@
+<div class="main-wrap">
+  <div class="profile-wrap">
+    <div class="profile-header">
+      <div class="head-name">
+        My profile
+      </div>
+      <div class="profile-edit">
+        Edit
+      </div>
+    </div>
+    <div class="profile-preview">
+      <div class="avatar">
+        <img [src]="currentUser.avatarLink" alt="">
+      </div>
+      <div class="summary">
+        <p class="name">{{ currentUser.name }}</p>
+        <p class="position">{{ currentUser.roleFormatted }}</p>
+      </div>
+    </div>
+    <div class="profile-details">
+      <div class="detail-wrap">
+        <p class="detail-name">date of birth</p>
+        <p class="detail-value">{{ currentUser.date | date:'dd MMMM yyyy'}}</p>
+      </div>
+      <div class="detail-wrap">
+        <p class="detail-name">personal email</p>
+        <p class="detail-value">{{ currentUser.personalEmail }}</p>
+      </div>
+      <div class="detail-wrap">
+        <p class="detail-name">work email</p>
+        <p class="detail-value">{{ currentUser.workEmail }}</p>
+      </div>
+      <div class="detail-wrap">
+        <p class="detail-name">phone number</p>
+        <p class="detail-value">{{ currentUser.phone }}</p>
+      </div>
+      <div class="detail-wrap">
+        <p class="detail-name">skype</p>
+        <p class="detail-value">{{ currentUser.skype }}</p>
+      </div>
+      <div class="detail-wrap">
+        <p class="detail-name">hire date</p>
+        <p class="detail-value">{{ currentUser.hireDate | date:'dd MMMM yyyy'}}</p>
+      </div>
+      <div class="detail-wrap">
+        <p class="detail-name">team name</p>
+        <p class="detail-value">{{ currentUser.teamName }}</p>
+      </div>
+      <div class="detail-wrap">
+        <p class="detail-name">team leader</p>
+        <p class="detail-value">{{ currentUser.teamLeader }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="vacation-block">
+    <div class="vacation-days">
+      <app-vacation-days></app-vacation-days>
+    </div>
+    <div class="my-vacation">
+      <app-my-vacations></app-my-vacations>
+    </div>
+  </div>
+</div>

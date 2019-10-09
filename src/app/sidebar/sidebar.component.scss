@@ -1,0 +1,21 @@
+.sidebar-wrapper {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 1px solid black;
+
+  .sidebar-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 220px;
+    height: 80px;
+    border: 1px solid black;
+    padding-left: 10px;
+    text-transform: capitalize;
+    box-sizing: border-box; 
+    width: 100%;
+  }
+}
