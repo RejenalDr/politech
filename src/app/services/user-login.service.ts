@@ -8,15 +8,15 @@ export class UserLoginService {
     date: new Date(1972, 10, 22),
     hireDate: new Date(1992, 11, 12),
     id: 1,
-    name: 'Andrew Bolcraft',
-    personalEmail: 'personal@andrew.com',
+    name: 'Lisa Bolcraft',
+    personalEmail: 'personal@lisa.com',
     phone: '+1234567890',
     position: 'employee',
     skype: 'bolcraft',
     role: UserRole.Leader,
     teamLeader: 'leader1',
     teamName: 'team1',
-    workEmail: 'work@andrew.com',
+    workEmail: 'work@lisa.com',
     roleFormatted: UserRole[UserRole.Employee],
     avatarLink: './../../assets/img/random-user.png'
   };

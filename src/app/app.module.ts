@@ -12,6 +12,8 @@ import { VacationDaysComponent } from './vacation-days/vacation-days.component';
 import { MyVacationsComponent } from './my-vacations/my-vacations.component';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { RequestVacationComponent } from './request-vacation/request-vacation.component';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { HomeComponent } from './home/home.component';
     MyProgileComponent,
     VacationDaysComponent,
     MyVacationsComponent,
-    HomeComponent
+    HomeComponent,
+    RequestVacationComponent,
   ],
   imports: [
     BrowserModule,
