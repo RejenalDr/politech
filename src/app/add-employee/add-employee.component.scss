@@ -1,0 +1,26 @@
+.edit-user-wrapper{
+    border: 1px solid black;
+    border-radius: 5px;
+    
+    .title{
+        padding: 5px;
+        border-bottom: 1px solid black;
+    }
+    
+    form{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        .edit-right{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        img{
+            background: grey;
+            border-radius: 50%;
+            width: 75px;
+            height: 75px;
+        }
+    }
+}

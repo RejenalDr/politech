@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+
 
 @Component({
   selector: 'app-request-vacation',
@@ -7,7 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RequestVacationComponent implements OnInit {
 
-  constructor() { }
+  constructor(private fb: FormBuilder) { }
+  requestForm = this.fb.group({
+    type: [''],
+    description: [''],
+    startDay: [''],
+    endDay: [''],
+    amount: [''],
+  });
+
 
   ngOnInit() {
   }

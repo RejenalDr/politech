@@ -1,53 +1,65 @@
 import { Injectable } from '@angular/core';
 import { IUser, UserRole } from '../models/user';
+import { HttpHeaders,HttpClient } from '@angular/common/http';
+
+
 @Injectable({
   providedIn: 'root'
 })
 export class UserLoginService {
+  
   private _user: IUser = {
-    date: new Date(1972, 10, 22),
-    hireDate: new Date(1992, 11, 12),
-    id: 1,
-    name: 'Lisa Bolcraft',
-    personalEmail: 'personal@lisa.com',
-    phone: '+1234567890',
-    position: 'employee',
-    skype: 'bolcraft',
-    role: UserRole.Leader,
-    teamLeader: 'leader1',
-    teamName: 'team1',
-    workEmail: 'work@lisa.com',
-    roleFormatted: UserRole[UserRole.Employee],
-    avatarLink: './../../assets/img/random-user.png'
+    id: '1',
+    firstName: 'Lisa',
+    surname: 'Bolcraft',
+    avatar: './../../assets/img/random-user.png',
+    birthdate: '1',
+    jobTitle: 'Manager',
+    workEmail: '1',
+    email: '1',
+    phone: '1',
+    skype: '1',
+    workStartDate: '1',
+    isActive: true,
+    workEndDate: '1',
+    deleted: false,
+    balance: 0,
+    teamId: '1',
   };
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   public get user(): IUser {
-    return this._user;
+    return this._employee;
   }
 
-  login() {
+  public _employee: IUser;
+
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Authorization':  'Bearer ' + localStorage.access_token
+    })
+  };
+
+  requestUrl = 'https://vacations.polytech.rocks:52540/api/Employee/7fac644d-c621-4b14-83d7-ef75347fa149'
+
+  getEmployee(){
+    return this.http.get(this.requestUrl, this.httpOptions);
   }
-  logout() {
-  }
-  getRoles() {
-  }
-  hasRole() {
-  }
+
   checkLeader() {
-    if (this._user.role === UserRole.Employee) {
-      return false;
-    } else {
+    // if (this._user.role === UserRole.Employee) {
+    //   return false;
+    // } else {
       return true;
-    }
+    //}
   }
   checkAdmin() {
-    if (this._user.role === UserRole.Admin) {
+    // if (this._user.role === UserRole.Admin) {
       return true;
-    } else {
-      return false;
-    }
+    // } else {
+    //   return false;
+    // }
   }
 
 

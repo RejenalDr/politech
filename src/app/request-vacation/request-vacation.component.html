@@ -1,36 +1,36 @@
 
 <div class="request-vacation-wrapper">
-    <form action="">
+    <form action="" [formGroup]="requestForm">
         <div class="form-inputs-container">
             <div class="row">
                 <div>
                     <label for="type">vacation type</label>
-                    <input type="text" name="type" id="">
+                    <input type="text" formControlName="type" id="">
                 </div>
                 <div>
                     <label for="type">comment</label>
-                    <input type="textarea" name="description" id="">
+                    <textarea formControlName="description" id=""></textarea>
                 </div>
 
             </div>
             <div class="row">
                 <div>
                     <label for="type">from</label>
-                    <input type="date" name="start-day" id="">
+                    <input type="date" formControlName="startDay" id="">
                 </div>
                 <div>
                     <label for="type">to</label>
-                    <input type="date" name="end-day" id="">
+                    <input type="date" formControlName="endDay" id="">
                 </div>
                 <div>
                     <label for="type">amount</label>
-                    <input type="text" name="amount" id=""><span> days in vacation</span>
+                    <input type="text" formControlName="amount" id=""><span> days in vacation</span>
                 </div>
 
             </div>
         </div>
         <div class="form-submit-container">
-            <button type="reset">Cancel</button>
+            <button type="reset" routerLink="../">Cancel</button>
             <button type="submit">Send</button>
         </div>
 

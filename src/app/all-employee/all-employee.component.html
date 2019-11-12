@@ -1,0 +1,10 @@
+<div class="all-employee-wrapper">
+  <div class="team" *ngFor="let team of allTeamUsers">
+      <p>{{ team.name }}</p>
+    <div class="employee" *ngFor="let employee of team.employees">
+      <div>{{ employee.firstName + ' ' +  employee.firstName}}</div>
+      <div>{{ employee.phone }}</div>
+      <div>{{ employee.email }}</div>
+    </div>
+  </div>
+</div>

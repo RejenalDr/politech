@@ -10,21 +10,21 @@
     </div>
     <div class="profile-preview">
       <div class="avatar">
-        <img [src]="currentUser.avatarLink" alt="">
+        <img [src]="currentUser.avatar" alt="">
       </div>
       <div class="summary">
-        <p class="name">{{ currentUser.name }}</p>
-        <p class="position">{{ currentUser.roleFormatted }}</p>
+        <p class="name">{{ currentUser.firstName  }} {{ currentUser.surname  }}</p>
+        <p class="position">{{ currentUser.jobTitle }}</p>
       </div>
     </div>
     <div class="profile-details">
       <div class="detail-wrap">
         <p class="detail-name">date of birth</p>
-        <p class="detail-value">{{ currentUser.date | date:'dd MMMM yyyy'}}</p>
+        <p class="detail-value">{{ currentUser.birthdate | date:'dd MMMM yyyy'}}</p>
       </div>
       <div class="detail-wrap">
         <p class="detail-name">personal email</p>
-        <p class="detail-value">{{ currentUser.personalEmail }}</p>
+        <p class="detail-value">{{ currentUser.email }}</p>
       </div>
       <div class="detail-wrap">
         <p class="detail-name">work email</p>
@@ -40,11 +40,11 @@
       </div>
       <div class="detail-wrap">
         <p class="detail-name">hire date</p>
-        <p class="detail-value">{{ currentUser.hireDate | date:'dd MMMM yyyy'}}</p>
+        <p class="detail-value">{{ currentUser.workStartDate | date:'dd MMMM yyyy'}}</p>
       </div>
       <div class="detail-wrap">
         <p class="detail-name">team name</p>
-        <p class="detail-value">{{ currentUser.teamName }}</p>
+        <p class="detail-value">{{ currentUser.teamId }}</p>
       </div>
       <div class="detail-wrap">
         <p class="detail-name">team leader</p>
@@ -54,7 +54,7 @@
   </div>
   <div class="vacation-block">
     <div class="vacation-days">
-      <app-vacation-days></app-vacation-days>
+      <app-vacation-days [vocationDays]="currentUser.balance"></app-vacation-days>
     </div>
     <div class="my-vacation">
       <router-outlet></router-outlet>

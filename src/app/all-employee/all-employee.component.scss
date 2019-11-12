@@ -1,0 +1,18 @@
+.all-employee-wrapper{
+    width: 100%;
+    border: solid 1px #000;
+    .team{
+        border-bottom: 1px solid #000;
+
+        .employee{
+            display: flex;
+            justify-content: space-around;
+            border-bottom: 1px solid #000;
+
+            div{
+                padding: 5px 0;
+                
+            }
+        }
+    }
+}

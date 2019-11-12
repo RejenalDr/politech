@@ -4,4 +4,14 @@
     border: 1px solid black;
     box-sizing: border-box;
     padding: 10px;
+    .form-inputs-container{
+        display: flex;
+        justify-content: space-around;
+    }
+    label{
+        display: block;
+    }
+    input[name=amount]{
+        width: 20%;
+    }
 }

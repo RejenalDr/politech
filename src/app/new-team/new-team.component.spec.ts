@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MyProgileComponent } from './my-progile.component';
+import { NewTeamComponent } from './new-team.component';
 
-describe('MyProgileComponent', () => {
-  let component: MyProgileComponent;
-  let fixture: ComponentFixture<MyProgileComponent>;
+describe('NewTeamComponent', () => {
+  let component: NewTeamComponent;
+  let fixture: ComponentFixture<NewTeamComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MyProgileComponent ]
+      declarations: [ NewTeamComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MyProgileComponent);
+    fixture = TestBed.createComponent(NewTeamComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

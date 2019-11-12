@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserLoginService } from '../services/user-login.service';
 import { IUser } from '../models/user';
+import { EmployeesService } from '../services/employees.service';
 
 @Component({
   selector: 'app-my-progile',
@@ -9,11 +10,16 @@ import { IUser } from '../models/user';
 })
 export class MyProgileComponent implements OnInit {
 
-  currentUser: IUser;
-  constructor(private userService: UserLoginService) { }
+  currentUser = {};
+  constructor(
+    private userService: UserLoginService,
+    private employeeService: EmployeesService
+    ) { }
   
   ngOnInit() {
-    this.currentUser = this.userService.user;
+    // this.userService.getEmployee().subscribe(data => {this.currentUser = data});
+    this.employeeService.getEmployee().subscribe(data => {this.currentUser = data});
+    this.employeeService.getCurrentEmployeeId();
   }
 
 

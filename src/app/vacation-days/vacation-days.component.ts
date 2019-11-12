@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { UserLoginService } from '../services/user-login.service';
+
 
 @Component({
   selector: 'app-vacation-days',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VacationDaysComponent implements OnInit {
 
-  constructor() { }
+  @Input() vocationDays: number;
+  constructor(private userService: UserLoginService) { }
 
   ngOnInit() {
   }
+
+
 
 }

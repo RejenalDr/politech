@@ -1,20 +1,20 @@
 <div *ngIf="leaderSidebar" class="sidebar-wrapper">
   <ng-container *ngIf="adminSidebar">
     <div class="sidebar-item">
-      Add New Employee
+     <a routerLink="/home/add-employee">Add New Employee</a> 
     </div>
     <div class="sidebar-item">
-      Add New Team
+      <a routerLink="/home/add-team">Add New Team</a>
     </div>
   </ng-container>
   <div class="sidebar-item">
-    vacation requests
+      vacation requests
   </div>
   <div class="sidebar-item">
     Team Calendar
   </div>
   <div class="sidebar-item">
-    List of Employees
+      <a routerLink="/home/all-employee">List of Employees</a>
   </div>
   <div class="sidebar-item">
     List of Teams

@@ -1,0 +1,26 @@
+
+<form [formGroup]="addTeamForm" (ngSubmit)="addteamSubmit()">
+
+  <div class="add-team-container">
+    <div>
+      <p>Team name</p>
+      <p><input type="text" formControlName="teamName"></p>
+      <p>Team leader</p>
+      <p>
+        <select formControlName="teamLeader" id="">
+          <option *ngFor="let opt of users" 
+          [ngValue]="{ name: opt.firstName + ' ' + opt.surname, id: opt.id }">{{opt.firstName + ' ' + opt.surname}}</option>
+        </select>
+      </p>
+
+    </div>
+    <div>
+    <p>Team members</p>
+      <p><select formControlName="teamMembers" id="" multiple>
+          <option *ngFor="let opt of users" [value]="opt.id">{{opt.firstName + ' ' + opt.surname}}</option>
+        </select>
+      </p>
+      <button type="submit">Save</button>
+    </div>
+  </div>
+</form>

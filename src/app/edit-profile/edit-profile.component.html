@@ -1,0 +1,83 @@
+<p>edit-profile works!</p>
+<div class="edit-user-wrapper">
+  <div class="title">
+    Edit Profile
+  </div>
+  <form [formGroup]="editProfileForm" (ngSubmit)="editSubmit()">
+    <div class="edit-left">
+      <div class="avatar">
+        <img src="" alt="">
+      </div>
+      <div class="detail-wrap">
+        <p class="detail-name">name</p>
+        <p class="detail-value"><input type="text" formControlName="name"></p>
+      </div>
+      <div class="detail-wrap">
+        <p class="detail-name">surname</p>
+        <p class="detail-value"><input type="text" formControlName="surname"></p>
+      </div>
+      <div class="detail-wrap">
+        <p class="detail-name">job title</p>
+        <p class="detail-value"><input type="text" formControlName="jobTitle"></p>
+      </div>
+      <div class="detail-wrap">
+        <p class="detail-name">status</p>
+        <p class="detail-value"><input type="text" formControlName="status"></p>
+      </div>
+      <div class="detail-wrap">
+        <p class="detail-name">days in vacation</p>
+        <p class="detail-value"><input type="text" formControlName="vacationDays"></p>
+      </div>
+    </div>
+    <div class="edit-right">
+      <div class="column">
+        <div class="detail-wrap">
+          <p class="detail-name">date of birth</p>
+          <p class="detail-value"><input type="text" formControlName="birthDate"></p>
+        </div>
+        <div class="detail-wrap">
+          <p class="detail-name">personal mail</p>
+          <p class="detail-value"><input type="text" formControlName="personalEmail"></p>
+        </div>
+        <div class="detail-wrap">
+          <p class="detail-name">phone number</p>
+          <p class="detail-value"><input type="text" formControlName="phone"></p>
+        </div>
+        <div class="detail-wrap">
+          <p class="detail-name">hire date</p>
+          <p class="detail-value"><input type="text" formControlName="hireDate"></p>
+        </div>
+        <div class="detail-wrap">
+          <p class="detail-name">team name</p>
+          <p class="detail-value"><input type="text" formControlName="teamName"></p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="detail-wrap">
+          <p class="detail-name">work mail</p>
+          <p class="detail-value"><input type="text" formControlName="workEmail"></p>
+        </div>
+        <div class="detail-wrap">
+          <p class="detail-name">skype</p>
+          <p class="detail-value"><input type="text" formControlName="skype"></p>
+        </div>
+        <div class="detail-wrap">
+          <p class="detail-name">date of dismissal</p>
+          <p class="detail-value"><input type="text" formControlName="dismissalDate"></p>
+        </div>
+        <div class="detail-wrap">
+          <p class="detail-name">team leader</p>
+          <p class="detail-value"><input type="text" formControlName="teamLeader"></p>
+        </div>
+      </div>
+
+      <div>
+        <button type="reset">Cancel</button>
+        <button type="submit">Done</button>
+      </div>
+
+    </div>
+  </form>
+
+
+</div>

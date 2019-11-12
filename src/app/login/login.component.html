@@ -1,14 +1,14 @@
 
 <div class="container">
     <img src="./../../assets/img/logo.png" alt="">
-    <form action="">
+    <form action="" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div class="input-wrap">
             <label for="email">Email</label>
-            <input type="email" name="email">
+            <input type="email" formControlName="email">
         </div>   
         <div class="input-wrap">
             <label for="password">Password</label>
-            <input type="password" name="passwrod">
+            <input type="password" formControlName="password">
         </div>
         <div class="input-wrap">
             <button type="submit">LOG IN</button>
